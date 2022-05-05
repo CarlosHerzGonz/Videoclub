@@ -49,7 +49,6 @@ public class Series {
     }public void setTitulo(String titulo) {
         this.titulo = titulo;
     }
-    @Override
     public String toString() {
         return super.toString();
     }
