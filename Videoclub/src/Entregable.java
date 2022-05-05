@@ -7,4 +7,9 @@ public interface Entregable {
     void devolver();
     boolean isEntregado();
     boolean compareTo(Object obj);
+
 }
+
+
+
+
