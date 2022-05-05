@@ -54,7 +54,4 @@ public class Series {
         return super.toString();
     }
 
-
-
-
 }
