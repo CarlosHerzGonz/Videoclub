@@ -59,17 +59,9 @@ public class Videojuego {
         this.titulo = titulo;
     }
 
-    @Override
+  
     public String toString() {
         return super.toString();
     }
-
-
-
-    
-
-    
-
-
     
 }
