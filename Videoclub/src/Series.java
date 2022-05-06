@@ -33,6 +33,10 @@ public class Series {
     public String getGenero() {
         
         return genero;
+
+
+
+
     }
     public String getCreador() {
         return creador;
