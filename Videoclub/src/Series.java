@@ -1,4 +1,4 @@
-public class Series {
+public class Series implements Entregable {
 
     //Atributos
     private String titulo;
@@ -8,7 +8,6 @@ public class Series {
     private String creador;
 
     Series () {
-
 
         this.temporadas=3;
         this.entregado=false;
@@ -30,17 +29,39 @@ public class Series {
         this.genero=gen;
         this.creador=c;
     }
+
+    public void entregar() {
+        
+    entregado=true;
+
+    }
+
+    public void devolver () {
+        entregado=false;
+    }
+    
+    public boolean isEntregado() {
+
+        return entregado;
+    }
+
+    public boolean compareTo(Object obj) {
+        
+       //Object object = new Series();
+        
+        if (this.temporadas>=((Series) obj).getTemporadas()){
+            return true;
+        } else {return false;}
+        
+    }
+
     public String getGenero() {
         
         return genero;
 
-
-
-
     }
     public String getCreador() {
         return creador;
-
 
     }
     public int getTemporadas() {
@@ -59,7 +80,14 @@ public class Series {
         this.titulo = titulo;
     }
     public String toString() {
-        return super.toString();
+
+        String txt;
+        if (this.entregado=true) {
+            txt="DISPONIBLE";
+        } else {txt="NO DISPONIBLE";}
+
+        return ("La serie de título "+this.titulo+" es del género "+this.genero+". El creador es "+this.creador
+        +". Tiene "+this.temporadas+" y en estos momentos está "+txt);
     }
 
 }

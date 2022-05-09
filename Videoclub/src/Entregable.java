@@ -8,6 +8,8 @@ public interface Entregable {
     boolean isEntregado();
     boolean compareTo(Object obj);
 
+    
+
 }
 
 
