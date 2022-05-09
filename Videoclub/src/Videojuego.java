@@ -1,4 +1,4 @@
-public class Videojuego {
+public class Videojuego implements Entregable{
     private String titulo,genero,compañia;
     private int horasE;
     private boolean entregado;
@@ -61,7 +61,34 @@ public class Videojuego {
 
   
     public String toString() {
-        return super.toString();
+        String ent;
+        if(this.entregado == true){
+            ent = "ENTREGADO: ";
+        }else{
+            ent = "NO ENTREGADO: ";
+        }
+        return "El videojuego con titulo: " + this.titulo + " del genero: " + this.genero + " de la compañía: " + this.compañia + " tiene una duración de: " + horasE + " horas y se encuentra " +ent;
+    }
+
+    public void entregar(){
+        this.entregado = true;
+    }
+
+    public void devolver(){ 
+        this.entregado = false;
+    }
+
+    public boolean isEntregado(){
+        return entregado;
+    }
+    public boolean compareTo(Object obj){
+
+         Videojuego v = (Videojuego)obj;
+
+        if(this.horasE >= v.getHorasE() ){
+            return true;
+        }else
+            return false;
     }
     
 }
