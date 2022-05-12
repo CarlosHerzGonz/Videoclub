@@ -29,6 +29,29 @@ public class Principal {
         }
         return ar;
     }
+
+    static void entregarcodigo(ArrayList a)
+    {
+        String tit=pedirtit();
+
+        for(int i;i<a.size();i++)
+        {
+            if(tit.equals(a[i].getTitulo)){a[i].entregar();}
+        }
+    }
+    static void numentregados(ArrayList a)
+    {
+        int cont=0;
+
+        for(int i;i<a.size();i++)
+        {
+            if(a[i].isEntregado){cont++;}
+        }
+    }
+    private static String pedirtit() {
+        return null;
+    }
+
     public static void main(String[] args) {
         ArrayList<Series> series = new ArrayList<Series>();
         ArrayList<Videojuego> videojuegos = new ArrayList<Videojuego>();
